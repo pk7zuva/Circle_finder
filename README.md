@@ -1,2 +1,2 @@
 # Circle_finder
-Micro DNA identification
+Circular DNA (Micro DNA) identification from pair-end high-throughput sequencing data
