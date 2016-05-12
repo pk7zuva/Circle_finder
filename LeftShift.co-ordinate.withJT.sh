@@ -1,4 +1,4 @@
-#This script left align a given co-ordinates
+#This script left aligns a given co-ordinates
 #The first file should be genome co-ordinate which need to be left aligned
 #The 2nd file should be the complete genome fasta sequence
 
