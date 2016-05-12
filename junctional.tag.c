@@ -1,3 +1,4 @@
+#This program generates junctional tags for a given island
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
