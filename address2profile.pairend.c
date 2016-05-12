@@ -4,7 +4,7 @@
 main(int argc,char *argv[])
 {
 char RBUF[200],filename[200],address[200],seq1[200],seq2[200],strand1,strand2,chr1[200],chr2[200];
-long size_chr=0,start1=0,end1=0,start2=0,Temp=0,i=0,read_len=0,profile[500000000];
+long size_chr=0,start1=0,end1=0,start2=0,Temp=0,i=0,read_len=0,profile[248956422];
 FILE *fp;
 if(argc==4)
 {
