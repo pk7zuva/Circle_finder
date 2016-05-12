@@ -1,3 +1,4 @@
+#This program reports the start and end of island and total number of bases sequenced in that interval
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
