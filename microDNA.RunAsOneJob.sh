@@ -1,3 +1,4 @@
+#This script identify the putative circular DNA co-ordinates based on junctional sequence mapping on Unmapped tags
 #Author Pankaj Kumar
 #Email: pankjrf@gmail.com
 #This script verify the circle identified by split read method and report the circle co-ordinates and the number of junctional tag identified in forward and reverse strand.
