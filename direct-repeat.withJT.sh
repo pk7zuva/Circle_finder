@@ -1,5 +1,5 @@
-#This script left align a given co-ordinates
-#The first file should be genome co-ordinate which need to be left aligned
+#This script finds direct repeat at a given co-ordinates
+#The first file should be genome co-ordinate are left aligned
 #The 2nd file should be the complete genome fasta sequence
 
 awk '{printf ("%s\t%d\t%d\n",$1,$2-1,$3+15)}' microDNA.JT.postalign.bed > microDNA.JT.postalign.up01dn15.bed
