@@ -2,4 +2,8 @@ For questions about the scripts or C programs in this project please contact Pan
 
 -------------------------------------------------------------------------------------------------------
 # CircularDNA_finder
-Circular DNA (Micro DNA) identification from pair-end high-throughput sequencing data
+A method to identify Circular DNA (Micro DNA) from pair-end high-throughput sequencing data
+
+Initially this method was described in following article
+
+
