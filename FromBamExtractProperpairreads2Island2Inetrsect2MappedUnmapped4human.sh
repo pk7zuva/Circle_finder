@@ -1,6 +1,6 @@
 #This program is to generate microDNA island from the sorted bam file
 #Usage: Program-Name Bam-file Length-of-longest-chromososme length-of-read Merge-Island-length(separation between two sequenced bases to be considered part of one island)
-ulimit -s unlimited
+ulimit -s unlimited 
 #This loop is specific to human genome
 for i in chr1 chr2 chr3 chr4 chr5 chr6 chr7 chr8 chr9 chr10 chr11 chr12 chr13 chr14 chr15 chr16 chr17 chr18 chr19 chr20 chr21 chr22 chrX chrY
         do
