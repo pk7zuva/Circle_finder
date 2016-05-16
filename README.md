@@ -13,4 +13,10 @@ Table of Contents
 
         Requirement
         
+        There are three main requirements to run the circle identification program and those are as follow:
+
+                An aligner (novoalign (http://www.novocraft.com/products/novoalign/) or any aligner of your choice )
+                bedtools (https://github.com/arq5x/bedtools2)
+                samtools (http://samtools.sourceforge.net)
+        
         Usage
