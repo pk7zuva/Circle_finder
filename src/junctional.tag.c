@@ -1,4 +1,5 @@
-#This program generates junctional tags for a given island
+//Author Pankaj Kumar; Biochemistry & Molecular Genetics; University of Virginia (pankjrf@gmail.com; pk7zuva@gmail.com; pk7z@eservices.virginia.edu)
+////Usage:<JUNCTIONAL.TAG> <file that has island coordinate and its sequence in each line> > <junction.fa>
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -12,7 +13,6 @@ main(int argc,char *argv[])
 	{
 		while(fgets(QBUF,60000,input1)){
 			if (strlen(QBUF)>1){
-          //      		*sequence='\0'; *coordinate='\0'; *sequence1='\0'; sequence2='\0';
                 		sscanf(QBUF,"%s%s",coordinate,sequence);
 				SeqLenth=strlen(sequence);
 				for (i = 0; i<=(SeqLenth-60); i++){
@@ -28,4 +28,8 @@ main(int argc,char *argv[])
 			}
 		}
 	}
+        else {
+                printf ("ERROR!!!!!!!!!!\n");
+                printf ("Usage:<JUNCTIONAL.TAG> <file that has island coordinate and its sequence in each line> > <junction.fa>\n");
+        }
 }
