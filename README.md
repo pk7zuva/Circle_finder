@@ -79,6 +79,15 @@ Step 6: You are all set to run the pipeline
 -------------------------------------------------------------------------------------------------------
 bash /path-of-the-"Circle_finder"-directory/microDNA.InOne.sh /path-of-the-"Circle_finder"-directory/hg38 Index11_1.fq Index11_2.fq 24 C4-2 49 10000 /path-of-the-"Circle_finder"-directory &
 
+#Arg1 is bowtie2 index file "/hdata1/CIRCLE_ANALYSIS/MICRODNA-HG38/hg38"
+#Arg2 is fastq file 1 "fastqfile1"
+#Arg3 is fastq file 2 "fastqfile2"
+#Arg4 is # of processor "24" Higher the number lower would be run time.
+#Arg5 is Sample name  "C4-2" in this case because circular DNA was isolated from C4-2 cell lines. You want give anyname to sample 
+#Arg6 Read length "49"
+#Arg7 Longest circle wish to identify "10000" Higher this number more time it would take to finish the run.
+#Arg8 Path of script directory
+
 Step 7: Final output file "microDNA.JT.postmotif.fa"
 -------------------------------------------------------------------------------------------------------
 head microDNA.JT.postmotif.fa chr1	28761	29551	0	1	NOMOTIF
