@@ -31,6 +31,35 @@ Table of Contents
         
         All the above tools should be installed on the system. 
 -------------------------------------------------------------------------------------------------------       
+
+
+Important Note about the update:
+
+**If your sequencing read length is >= 100 bases long then it is recommended to use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
+
+Also one need to download the whole genome and index file link provided in to "download-link-hg38-and-bowtie-index.txt" file.
+
+#Usage: bash "Number of processors" "/path-of-whole-genome-file/hg38.fa" "fastq file 1" "fastq file 2" "minNonOverlap between two split reads" "Sample name" "genome build"
+
+#bash /path-of-script-dirctory/microDNA-pipeline-bwa-mem-samblaster.sh 16 /path-of-script-dirctory/hg38.fa 1E_S1_L1-L4_R1_001.fastq.75bp-R1.fastq 1E_S1_L1-L4_R2_001.fastq.75bp-R2.fastq 10 1E hg38
+
+#Arg1 = Number of processors
+
+#Arg2 = Genome or index file "/hdata1/MICRODNA-HG38/hg38.fa"
+
+#Arg3 = fastq file 1 "1E_S1_L1-L4_R1_001.fastq"
+
+#Arg4 = fastq file 2 "1E_S1_L1-L4_R2_001.fastq"
+
+#Arg5 = minNonOverlap between two split reads "10"
+
+#Arg6 = Sample name "1E"
+
+#Arg7 = genome build "hg38"
+
+#####################################################################################################
+
+
 Usage: bash "microDNA.InOne.sh" "firstfastqfile_R1_001.fastq" "secondfastqfile_R2_001.fastq" "samplename"  "Island.Mapped-Unmapped_file.Intersect_PE.bed"
 
 Replace the samplename with what ever name you would like to give to your sample. At the end you get a list of circular DNA with number of junctional sequence. It also will give the information about presence of direct repeat at junction (this is one of the property seen with circular DNA).
@@ -38,7 +67,7 @@ Replace the samplename with what ever name you would like to give to your sample
 
 Welcome to the Circle_finder wiki!
 
-### This is step by step guide to run Circle_Finder
+### This is step by step guide to run Circle_Finder. Use the below steps if your read length <100 bases
 
 Step 1: Clone the repository
 -------------------------------------------------------------------------------------------------------
