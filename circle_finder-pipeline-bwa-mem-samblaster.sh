@@ -8,7 +8,7 @@
 #Arg7 = genome build "hg38"
 
 #Usage: bash "Number of processors" "/path-of-whole-genome-file/hg38.fa" "fastq file 1" "fastq file 2" "minNonOverlap between two split reads" "Sample name" "genome build"
-#bash ../microDNA-pipeline-bwa-mem-samblaster.sh 16 /hdata1/MICRODNA-HG38/hg38.fa ../1E_S1_L1-L4_R1_001.fastq.75bp-R1.fastq ../1E_S1_L1-L4_R2_001.fastq.75bp-R2.fastq 10 1E hg38
+#bash /path-of-script-dirctory/microDNA-pipeline-bwa-mem-samblaster.sh 16 /hdata1/MICRODNA-HG38/hg38.fa 1E_S1_L1-L4_R1_001.fastq.75bp-R1.fastq 1E_S1_L1-L4_R2_001.fastq.75bp-R2.fastq 10 1E hg38
 
 #Step 1: Mapping.
 
