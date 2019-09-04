@@ -20,11 +20,14 @@ Table of Contents
         **Followings are the software requirements to run the circle identification program:**
 
                 An aligner (novoalign (http://www.novocraft.com/products/novoalign/) or any aligner of your choice like Bowtie and run it without allowing soft clipping parameter.)
-                bowtie2 (https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.5.1/)
+                 bowtie2 (https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.5.1/)
                 bedtools (https://github.com/arq5x/bedtools2)
                 samtools (http://samtools.sourceforge.net)
                 parallel (https://www.gnu.org/software/parallel/)
+                     bwa (https://github.com/lh3/bwa)
+              samblaster (https://github.com/GregoryFaust/samblaster)
                 
+-------------------------------------------------------------------------------------------------------    
         
         All the above tools should be installed on the system. 
 -------------------------------------------------------------------------------------------------------       
