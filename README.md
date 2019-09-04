@@ -23,7 +23,7 @@ Table of Contents
                 bowtie2 (https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.5.1/)
                 bedtools (https://github.com/arq5x/bedtools2)
                 samtools (http://samtools.sourceforge.net)
-                gparallel (https://www.gnu.org/software/parallel/)
+                parallel (https://www.gnu.org/software/parallel/)
                 
         
         All the above tools should be installed on the system. 
