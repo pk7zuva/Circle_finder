@@ -20,10 +20,13 @@ Table of Contents
         **There are three main requirements to run the circle identification program and those are as follow:**
 
                 An aligner (novoalign (http://www.novocraft.com/products/novoalign/) or any aligner of your choice like Bowtie and run it without allowing soft clipping parameter.)
+                bowtie2 (https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.5.1/)
                 bedtools (https://github.com/arq5x/bedtools2)
                 samtools (http://samtools.sourceforge.net)
+                gparallel (https://www.gnu.org/software/parallel/)
+                
         
-        The only thing need to be chnaged in the script is the path of aligner, samtools and bedtools according to your system. 
+        All the above tools should be installed on the system. 
 -------------------------------------------------------------------------------------------------------       
 Usage: bash "microDNA.InOne.sh" "firstfastqfile_R1_001.fastq" "secondfastqfile_R2_001.fastq" "samplename"  "Island.Mapped-Unmapped_file.Intersect_PE.bed"
 
