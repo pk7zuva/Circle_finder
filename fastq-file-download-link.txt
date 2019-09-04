@@ -1,0 +1,2 @@
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/Index11_1.fq
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/Index11_2.fq

@@ -1,0 +1,13 @@
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.1.bt2
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.2.bt2
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.3.bt2
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.4.bt2
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.amb
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.ann
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.bwt
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.fai
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.pac
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.sa
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.rev.1.bt2
+http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.rev.2.bt2
