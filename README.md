@@ -36,12 +36,16 @@ Table of Contents
 Important Note about the update:
 
 **If your sequencing read length is >= 100 bases long then it is recommended to use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
+-------------------------------------------------------------------------------------------------------  
 
 Also one need to download the whole genome and index file link provided in to "download-link-hg38-and-bowtie-index.txt" file.
+-------------------------------------------------------------------------------------------------------  
 
 #Usage: bash "Number of processors" "/path-of-whole-genome-file/hg38.fa" "fastq file 1" "fastq file 2" "minNonOverlap between two split reads" "Sample name" "genome build"
+-------------------------------------------------------------------------------------------------------  
 
 #bash /path-of-script-dirctory/microDNA-pipeline-bwa-mem-samblaster.sh 16 /path-of-script-dirctory/hg38.fa 1E_S1_L1-L4_R1_001.fastq.75bp-R1.fastq 1E_S1_L1-L4_R2_001.fastq.75bp-R2.fastq 10 1E hg38
+-------------------------------------------------------------------------------------------------------  
 
 #Arg1 = Number of processors
 
@@ -57,7 +61,7 @@ Also one need to download the whole genome and index file link provided in to "d
 
 #Arg7 = genome build "hg38"
 
-#####################################################################################################
+
 
 
 Usage: bash "microDNA.InOne.sh" "firstfastqfile_R1_001.fastq" "secondfastqfile_R2_001.fastq" "samplename"  "Island.Mapped-Unmapped_file.Intersect_PE.bed"
