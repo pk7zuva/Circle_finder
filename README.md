@@ -17,7 +17,7 @@ Table of Contents
 -------------------------------------------------------------------------------------------------------
         Requirement
         
-        **There are three main requirements to run the circle identification program and those are as follow:**
+        **Followings are the software requirements to run the circle identification program:**
 
                 An aligner (novoalign (http://www.novocraft.com/products/novoalign/) or any aligner of your choice like Bowtie and run it without allowing soft clipping parameter.)
                 bowtie2 (https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.5.1/)
