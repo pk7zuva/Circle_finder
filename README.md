@@ -35,11 +35,11 @@ Welcome to the Circle_finder wiki!
 ### This is step by step guide to run Circle_Finder
 
 Step 1: Clone the repository
-
+-------------------------------------------------------------------------------------------------------
 git clone https://github.com/pk7zuva/Circle_finder.git
 
 Step 2: Change to "Circle_finder" directory
-
+-------------------------------------------------------------------------------------------------------
 cd Circle_finder
 
 In this directory you will find four types of files: 1) *.c 2) *.sh 3) *.txt and 4) C executable that has no extension
@@ -47,7 +47,7 @@ In this directory you will find four types of files: 1) *.c 2) *.sh 3) *.txt and
 Note: Though the "C" executable files are provided it is advisable to make these executable afresh
 
 Step 3: Type the following command on your terminal one by one
-
+-------------------------------------------------------------------------------------------------------
 cc -o ADDRESS2PROFILEPAIREND address2profile.pairend.c
 
 cc -o DIRECT.REPEAT.FINDER1 direct.repeat.finder1.c
@@ -59,7 +59,7 @@ cc -o LEFT.ALIGNMENT left.alignment.c
 cc -o MIDNA_START_END_SCORE midna_start_end_score.c
 
 Step 4: Download the whole genome files and bowtie index files from link given in file "download-link-hg38-and-bowtie-index.txt"
-
+-------------------------------------------------------------------------------------------------------
 cat download-link-hg38-and-bowtie-index.txt
 
 http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.1.bt2 http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.2.bt2 http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.3.bt2 http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.4.bt2 http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.amb http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.ann http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.bwt http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.fai http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.pac http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa.sa http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.rev.1.bt2 http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.rev.2.bt2
@@ -67,17 +67,17 @@ http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa http://genome.bioc
 Example download command: wget http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/hg38.fa
 
 Step 5: Download the fastq files. Link to download these files is given in file "fastq-file-download-link.txt"
-
+-------------------------------------------------------------------------------------------------------
 cat fastq-file-download-link.txt
 
 http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/Index11_1.fq http://genome.bioch.virginia.edu/CIRCLE_FINDER_MASTER/Index11_2.fq
 
 Step 6: You are all set to run the pipeline
-
+-------------------------------------------------------------------------------------------------------
 bash /path-of-the-"Circle_finder"-directory/microDNA.InOne.sh /path-of-the-"Circle_finder"-directory/hg38 Index11_1.fq Index11_2.fq 24 C4-2 49 10000 /path-of-the-"Circle_finder"-directory &
 
 Step 7: Final output file "microDNA.JT.postmotif.fa"
-
+-------------------------------------------------------------------------------------------------------
 head microDNA.JT.postmotif.fa chr1	28761	29551	0	1	NOMOTIF
 
 chr1	199385	199915	0	1	GTC
@@ -99,7 +99,7 @@ chr1	982484	982697	1	0	NOMOTIF
 chr1	983705	984358	0	2	C
 
 Step 8: Explanation of output
-
+-------------------------------------------------------------------------------------------------------
 Column 1 "Chromosome name"
 
 Column 2 "start position of circle"
@@ -113,7 +113,7 @@ Column 5 "Number of reads mapping on circle junction from "-" strand"
 Column 6 "micro homology (if any) at the junction of circle"
 
 Step 9: If you wish to extract only those circular DNA that has evidence of at least one read mapping on circle junction as "+" and "-" orientation
-
+-------------------------------------------------------------------------------------------------------
 awk '$4>0 && $5>0' microDNA.JT.postmotif.fa | head
 
 chr1	1069854	1070524	1	2	C
