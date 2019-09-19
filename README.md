@@ -62,7 +62,9 @@ Also one need to download the whole genome and index file link provided in to "d
 #Arg7 = genome build "hg38"
 
 
+-------------------------------------------------------------------------------------------------------
 
+Below instruction are to run Circle_Finder if your read length is <100 bp
 
 Usage: bash "microDNA.InOne.sh" "firstfastqfile_R1_001.fastq" "secondfastqfile_R2_001.fastq" "samplename"  "Island.Mapped-Unmapped_file.Intersect_PE.bed"
 
@@ -71,7 +73,7 @@ Replace the samplename with what ever name you would like to give to your sample
 
 Welcome to the Circle_finder wiki!
 
-### This is step by step guide to run Circle_Finder. Use the below steps if your read length <100 bases
+### Following are the step by step guide to run Circle_Finder. Use the below steps if your read length <100 bases
 
 Step 1: Clone the repository
 -------------------------------------------------------------------------------------------------------
