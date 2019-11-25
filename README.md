@@ -73,7 +73,7 @@ Replace the samplename with what ever name you would like to give to your sample
 
 Welcome to the Circle_finder wiki!
 
-### Following are the step by step guide to run Circle_Finder. Use the below steps if your read length <100 bases
+### Following are the step by step guide to run Circle_Finder. Use the below steps if your read length <75 bases
 
 Step 1: Clone the repository
 -------------------------------------------------------------------------------------------------------
