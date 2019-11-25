@@ -1,4 +1,4 @@
-#Use this script if your read length is >= 100 base
+#Use this script if your read length is >= 75
 #Arg1 = Number of processors
 #Arg2 = Genome or index file "/hdata1/MICRODNA-HG38/hg38.fa"
 #Arg3 = fastq file 1 "1E_S1_L1-L4_R1_001.fastq"
@@ -7,8 +7,8 @@
 #Arg6 = Sample name "1E"
 #Arg7 = genome build "hg38"
 
-#Usage: bash microDNA-pipeline-bwa-mem-samblaster.sh "Number of processors" "/path-of-whole-genome-file/hg38.fa" "fastq file 1" "fastq file 2" "minNonOverlap between two split reads" "Sample name" "genome build"
-#bash microDNA-pipeline-bwa-mem-samblaster.sh 16 /hdata1/MICRODNA-HG38/hg38.fa 1E_S1_L1-L4_R1_001.fastq.75bp-R1.fastq 1E_S1_L1-L4_R2_001.fastq.75bp-R2.fastq 10 1E hg38
+#Usage: bash "Number of processors" "/path-of-whole-genome-file/hg38.fa" "fastq file 1" "fastq file 2" "minNonOverlap between two split reads" "Sample name" "genome build"
+#bash circle_finder-pipeline-bwa-mem-samblaster.sh 16 hg38.fa 1E_S1_L1-L4_R1_001.fastq.75bp-R1.fastq 1E_S1_L1-L4_R2_001.fastq.75bp-R2.fastq 10 1E hg38
 
 #Step 1: Mapping.
 
@@ -66,12 +66,14 @@ awk '$1==$10 && $7==$16 && $6>0 && $15>0 {print $4} ' $6-$7\.split_freq2.oneline
 grep -w -Ff $6-$7\.split_freq2.oneline.S-R-S-CHR-S-ST.ID.txt $6-$7\.concordant_freq3.txt > $6-$7\.concordant_freq3.2SPLIT-1M.txt
 
 #Step 10: Sorting based on read-id followed by length of mapped reads.
-awk '{printf ("%s\t%d\n",$0,($3-$2)+1)}' $6-$7\.concordant_freq3.2SPLIT-1M.txt | sort -k4,4 -k10,10n | sed 'N;N;s/\n/\t/g' > $6-$7\.concordant_freq3.2SPLIT-1M.inoneline.txt
+#awk '{printf ("%s\t%d\n",$0,($3-$2)+1)}' $6-$7\.concordant_freq3.2SPLIT-1M.txt | sort -k4,4 -k10,10n | sed 'N;N;s/\n/\t/g' > $6-$7\.concordant_freq3.2SPLIT-1M.inoneline.txt
+awk 'BEGIN{FS=OFS="\t"} {gsub("M", " M ", $8)} 1' $6-$7\.concordant_freq3.2SPLIT-1M.txt | awk 'BEGIN{FS=OFS="\t"} {gsub("S", " S ", $8)} 1' | awk 'BEGIN{FS=OFS="\t"} {gsub("H", " H ", $8)} 1' | awk 'BEGIN{FS=OFS=" "} {if (($9=="M" && $NF=="H") || ($9=="M" && $NF=="S"))  {printf ("%s\tfirst\n",$0)} else if (($9=="S" && $NF=="M") || ($9=="H" && $NF=="M")) {printf ("%s\tsecond\n",$0)} else  {printf ("%s\tconfusing\n",$0)}}' | awk 'BEGIN{FS=OFS="\t"} {gsub("\ ", "", $8)} 1' | awk '{printf ("%s\t%d\n",$0,($3-$2)+1)}' | sort -k4,4 -k10,10n | sed 'N;N;s/\n/\t/g' > $6-$7\.concordant_freq3.2SPLIT-1M.inoneline.txt
 
 #Step 11: Unique number of microDNA with number of split reads
 #awk '{if ($1==$10 && $1==$19 && $7==$16 && $2<$11 && $2<$20 && $20<$11 && (($20-$2)<=500 || ($11-$20)<=500)) {printf ("%s\t%d\t%d\n",$1,$2,$12)} else if ($1==$10 && $1==$19 && $7==$16 && $2>$11 && $11<$20 && $20<$2 && (($2-$20)<=500 || ($20-$11)<=500)) {printf ("%s\t%d\t%d\n",$1,$11,$3)}}' $6-$7\.concordant_freq3.2SPLIT-1M.inoneline.txt | sort | uniq -c | awk '{printf ("%s\t%d\t%d\t%d\n",$2,$3,$4,$1)}' > $6-$7\.microDNA-JT.txt
-awk '{if ($1==$11 && $1==$21 && $7==$17 && $2<$12 && $2<$22 && $22<$12 && $7=="+" && $9=="second" {printf ("%s\t%d\t%d\n",$1,$2,$13)} esle if ($1==$11 && $1==$21 && $7==$17 && $2<$12 && $2<$22 && $22<$12 && $7=="-" && $9=="first" {printf ("%s\t%d\t%d\n",$1,$2,$13)} else if ($1==$11 && $1==$21 && $7==$17 && $2>$12 && $12<$22 && $22<$2 && $7=="+" && $9=="second" {printf ("%s\t%d\t%d\n",$1,$12,$3)}  else if ($1==$11 && $1==$21 && $7==$17 && $2>$12 && $12<$22 && $22<$2 && $7=="-" && $9=="first" {printf ("%s\t%d\t%d\n",$1,$12,$3)}}' $6-$7\.concordant_freq3.2SPLIT-1M.inoneline.txt | sort | uniq -c | awk '{printf ("%s\t%d\t%d\t%d\n",$2,$3,$4,$1)}' > $6-$7\.microDNA-JT.txt
 
-awk '{if ($1==$10 && $7==$16 && $7=="+" && $9=="second" && $2<$12) {printf ("%s\t%d\t%d\n",$1,$2,$12)} else if ($1==$10 && $7==$16 && $7=="-" && $9=="first" && $2>$12) {printf ("%s\t%d\t%d\n",$1,$11,$3)}}' $6-$7\.split_freq4.oneline.txt | sort | uniq -c | awk '{printf ("%s\t%d\t%d\t%d\n",$2,$3,$4,$1)}' | awk '$4>=4' > $6-$7\.only-splitread-microDNA-JT.txt
+awk '$1==$11 && $1==$21 && $7==$17'  $6-$7\.concordant_freq3.2SPLIT-1M.inoneline.txt  | awk '($7=="+" && $27=="-") || ($7=="-" && $27=="+")' | awk '{if ($17=="+" && $19=="second" && $12<$2 && $22>=$12 && $23<=$3) {printf ("%s\t%d\t%d\n",$1,$12,$3)} else if ($17=="-" && $19=="first" && $12>$2 && $22>=$2 && $23<=$13) {printf ("%s\t%d\t%d\n",$1,$2,$13)} }' | sort | uniq -c | awk '{printf ("%s\t%d\t%d\t%d\n",$2,$3,$4,$1)}' > $6-$7\.microDNA-JT.txt 
+
+awk '$1==$10 && $7==$16 ' $6-$7\.split_freq4.oneline.txt | awk '{if ($16=="+" && $18=="second" && $11<$2) {printf ("%s\t%d\t%d\n",$1,$11,$3)} else if ($16=="-" && $18=="first" && $11>$2) {printf ("%s\t%d\t%d\n",$1,$2,$12)} }' | sort | uniq -c | awk '{printf ("%s\t%d\t%d\t%d\n",$2,$3,$4,$1)}' | awk '$4>=4' > $6-$7\.only-splitread-microDNA-JT.txt
 
 rm *hg38.sam *hg38.bam
