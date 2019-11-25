@@ -35,7 +35,7 @@ Table of Contents
 
 Important Note about the update:
 
-**If your sequencing read length is >= 100 bases long then it is recommended to use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
+**If your sequencing read length is >= 75 bases long then it is recommended to use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
 -------------------------------------------------------------------------------------------------------  
 
 Also one need to download the whole genome and index file link provided in to "download-link-hg38-and-bowtie-index.txt" file.
