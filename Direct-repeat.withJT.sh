@@ -16,4 +16,4 @@ cat microDNA.JT.postalign.wholeread.bed | sort -k1,1 -k2,2n | awk '{print $4,$5}
 #Making input file for finding direct repeat at the microDNA junction
 paste JT_Number TeMp.premotif.fa > microDNA.JT.premotif.fa
 #Identify direct repat in a given microDNA co-ordinate
-/hdata1/MICRODNA-HG38/DIRECT.REPEAT.FINDER1 microDNA.JT.premotif.fa > microDNA.JT.postmotif.fa
+DIRECT.REPEAT.FINDER1 microDNA.JT.premotif.fa > microDNA.JT.postmotif.fa
