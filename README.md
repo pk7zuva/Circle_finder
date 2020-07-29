@@ -76,8 +76,9 @@ Replace the samplename with what ever name you would like to give to your sample
 
 
 Welcome to the Circle_finder wiki!
+### Note: Before you start the below Steps user need to install bowtie2 (https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.5.1/), bedtools, samtools, parallel, bwa and samblaster (https://github.com/GregoryFaust/samblaster) in their system. 
 
-### This is a step by step guide to run Circle_Finder (if your sample was enriched for circular DNA and the read length of your paired-end sequencing library is <75 bases).
+### This is a step by step guide to run Circle_Finder (if your sample was enriched for circular DNA and the read length of your paired-end sequencing library is <75 bases).###
 
 Step 1: Clone the repository
 -------------------------------------------------------------------------------------------------------
