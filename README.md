@@ -19,7 +19,7 @@ Table of Contents
         
         **Followings are the software requirements to run the circle identification program:**
 
-                An aligner (novoalign (http://www.novocraft.com/products/novoalign/) or any aligner of your choice like Bowtie and run it without allowing soft clipping parameter.)
+                An aligner like Bowtie (for read length less than 75) and run it without allowing soft clipping parameter
                  bowtie2 (https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.5.1/)
                 bedtools (https://github.com/arq5x/bedtools2)
                 samtools (http://samtools.sourceforge.net)
@@ -68,7 +68,7 @@ Also one need to download the whole genome and index file link provided in to "d
 
 -------------------------------------------------------------------------------------------------------
 
-Below instruction are to run Circle_Finder if your read length is <100 bp
+Below instruction are to run Circle_Finder if your read length is <75 bp
 
 Usage: bash "microDNA.InOne.sh" "firstfastqfile_R1_001.fastq" "secondfastqfile_R2_001.fastq" "samplename"  "Island.Mapped-Unmapped_file.Intersect_PE.bed"
 
@@ -77,7 +77,7 @@ Replace the samplename with what ever name you would like to give to your sample
 
 Welcome to the Circle_finder wiki!
 
-### Following are the step by step guide to run Circle_Finder. Use the below steps if your read length <75 bases
+### This is a step by step guide to run Circle_Finder (if your sample was enriched for circular DNA and the read length of your paired-end sequencing library is <75 bases).
 
 Step 1: Clone the repository
 -------------------------------------------------------------------------------------------------------
