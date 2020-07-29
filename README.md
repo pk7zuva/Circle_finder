@@ -39,7 +39,10 @@ Important Note about the update:
 -------------------------------------------------------------------------------------------------------
 
 
-Important Note for identifying putative circular DNA from ATAC-seq, Whole genome sequencing, Whole exome sequencing etc. 
+Important Note for identifying putative circular DNA from ATAC-seq, Whole genome sequencing, Whole exome sequencing etc. Use the following script if the read length is >=75 
+
+https://github.com/pk7zuva/Circle_finder/blob/master/circle_finder-pipeline-bwa-mem-samblaster.sh
+
 
 
 **Note: If your sample was not enriched for circular DNA (like normal ATAC-seq, whole-genome sequencing, etc.) and read length >75 bases long then use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
