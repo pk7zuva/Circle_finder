@@ -37,15 +37,17 @@ Important Note about the update:
 
 **If your sequencing (paired-end) read length is >= 75 bases long and your sample was also enriched for circular DNA then it is recommended to use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
 -------------------------------------------------------------------------------------------------------
+
+
+Important Note for identifying putative circular DNA from ATAC-seq, Whole genome sequencing, Whole exome sequencing etc. 
+
+
 **Note: If your sample was not enriched for circular DNA (like normal ATAC-seq, whole-genome sequencing, etc.) and read length >75 bases long then use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
 -------------------------------------------------------------------------------------------------------
 **Note: Circle_finder can not be used if your sample was not enriched for circular DNA before library preparation AND length of read <75.
 -------------------------------------------------------------------------------------------------------  
 
-Also one need to download the whole genome and index file link provided in to "download-link-hg38-and-bowtie-index.txt" file.
--------------------------------------------------------------------------------------------------------  
-
-#Usage: bash "Number of processors" "/path-of-whole-genome-file/hg38.fa" "fastq file 1" "fastq file 2" "minNonOverlap between two split reads" "Sample name" "genome build"
+#Usage: bash Script_name "Number of processors" "/path-of-whole-genome-file/hg38.fa" "fastq file 1" "fastq file 2" "minNonOverlap between two split reads" "Sample name" "genome build"
 -------------------------------------------------------------------------------------------------------  
 
 #bash /path-of-script-dirctory/microDNA-pipeline-bwa-mem-samblaster.sh 16 /path-of-script-dirctory/hg38.fa 1E_S1_L1-L4_R1_001.fastq.75bp-R1.fastq 1E_S1_L1-L4_R2_001.fastq.75bp-R2.fastq 10 1E hg38
@@ -77,6 +79,10 @@ Replace the samplename with what ever name you would like to give to your sample
 
 Welcome to the Circle_finder wiki!
 ### Note: Before you start the below Steps user need to install bowtie2 (https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.5.1/), bedtools, samtools, parallel, bwa and samblaster (https://github.com/GregoryFaust/samblaster) in their system. 
+
+
+Also one need to download the whole genome and index file link provided in to "download-link-hg38-and-bowtie-index.txt" file if you would like to test the pipeline.
+-------------------------------------------------------------------------------------------------------  
 
 ### This is a step by step guide to run Circle_Finder (if your sample was enriched for circular DNA and the read length of your paired-end sequencing library is <75 bases).###
 
