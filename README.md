@@ -35,7 +35,7 @@ Table of Contents
 
 Important Note about the update:
 
-**If your sequencing (paired-end) read length is >= 100 bases long and your sample was also enriched for circular DNA then it is recommended to use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
+**If your sequencing (paired-end) read length is >= 75 bases long and your sample was also enriched for circular DNA then it is recommended to use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
 -------------------------------------------------------------------------------------------------------
 **Note: If your sample was not enriched for circular DNA (like normal ATAC-seq, whole-genome sequencing, etc.) and read length >75 bases long then use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
 -------------------------------------------------------------------------------------------------------
