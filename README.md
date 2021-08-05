@@ -35,7 +35,7 @@ Table of Contents
 
 Important Note about the update:
 
-**If your sequencing (paired-end) read length is >= 75 bases long and your sample was also enriched for circular DNA then it is recommended to use the following script ** "circle_finder-pipeline-bwa-mem-samblaster.sh"
+**If your sequencing (paired-end) read length is >= 75 bases long and your sample was also enriched for circular DNA then you may use any of the two following script ** "microDNA.InOne.sh" or "circle_finder-pipeline-bwa-mem-samblaster.sh". The first one (microDNA.InOne.sh) has higher specificity but takes longer time to run.
 -------------------------------------------------------------------------------------------------------
 
 
